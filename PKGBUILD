@@ -1,6 +1,6 @@
 pkgname=spotify
-pkgver=1.0.19.106
-_anotherpkgver=.gb8a7150f
+pkgver=1.0.23.93
+_anotherpkgver=.gd6cfae15
 pkgrel=1
 pkgdesc="A proprietary music streaming service"
 arch=('x86_64')
@@ -8,10 +8,10 @@ license=('custom:"Copyright (c) 2006-2010 Spotify Ltd"')
 url="http://www.spotify.com"
 options=('!strip')
 depends=("alsa-lib>=1.0.14" "gconf" "gtk2" "glib2" "nss" "systemd" "libxtst" "libx11" "libxss" "libcurl-compat")
-source=("http://repository.spotify.com/pool/non-free/s/spotify-client/spotify-client_${pkgver}${_anotherpkgver}_amd64.deb"
+source=("http://repository.spotify.com/pool/non-free/s/spotify-client/spotify-client_${pkgver}${_anotherpkgver}-30_amd64.deb"
         "spotify"
         "spotify.protocol")
-md5sums=('bf32c2e053099789bdd9246fd8cd828c'
+md5sums=('0ed02db6c7c35a83ac73055865b4b350'
          '4b70593f14adb66d4aa4803124503376'
          'ef25ddc5b6bf8fe1a0d64cbd79e1f7b4')
 
@@ -34,5 +34,7 @@ package() {
   if [ -f /usr/bin/startkde ]; then
     echo "Installing with KDE support"
     install -Dm644 "${srcdir}/spotify.protocol" "${pkgdir}/usr/share/kde4/services/spotify.protocol"
+    install -Dm644 "${srcdir}/spotify.protocol" "${pkgdir}/usr/share/kservices5/spotify.protocol"
   fi
+  find ${pkgdir}/usr -type d -exec chmod 755 {} \;
 }
