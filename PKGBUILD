@@ -1,6 +1,6 @@
 pkgname=spotify
-pkgver=1.0.28.89.gf959d4ce
-_anotherpkgver=37
+pkgver=1.0.29
+_anotherpkgver=92.g67727800-21
 pkgrel=1
 pkgdesc="A proprietary music streaming service"
 arch=('x86_64')
@@ -8,14 +8,13 @@ license=('custom:"Copyright (c) 2006-2010 Spotify Ltd"')
 url="http://www.spotify.com"
 options=('!strip')
 depends=("alsa-lib" "gconf" "gtk2" "glib2" "nss" "systemd" "libxtst" "libx11" "libxss" "libcurl-compat")
-source=("http://repository.spotify.com/pool/non-free/s/spotify-client/spotify-client_${pkgver}-${_anotherpkgver}_amd64.deb"
+source=("http://repository.spotify.com/pool/non-free/s/spotify-client/spotify-client_${pkgver}.${_anotherpkgver}_amd64.deb"
         "spotify.protocol")
-md5sums=('eed799711466e7cf87dd44c0298b750c'
+md5sums=('f8972caff7bb8a24281d1cff043030ee'
          'ef25ddc5b6bf8fe1a0d64cbd79e1f7b4')
 
 
 package() {
-    cd "${srcdir}"
 	tar -xzf data.tar.gz -C "${pkgdir}"
     rm -r ${pkgdir}/usr/share/doc
 	install -d "${pkgdir}"/usr/share/applications
