@@ -1,6 +1,6 @@
 pkgname=spotify
-pkgver=1.0.31
-_anotherpkgver=56.g526cfefe-33
+pkgver=1.0.32
+_anotherpkgver=94.g8a839395-32
 pkgrel=1
 pkgdesc="A proprietary music streaming service"
 arch=('x86_64')
@@ -10,7 +10,7 @@ options=('!strip')
 depends=("alsa-lib" "gconf" "gtk2" "glib2" "nss" "systemd" "libxtst" "libx11" "libxss" "libcurl-compat")
 source=("http://repository.spotify.com/pool/non-free/s/spotify-client/spotify-client_${pkgver}.${_anotherpkgver}_amd64.deb"
         "spotify.protocol")
-md5sums=('8a4c749c95df04fbe7aea6917bf2be8f'
+md5sums=('9156ec0225ec9453fc2dff7dd21bb392'
          'ef25ddc5b6bf8fe1a0d64cbd79e1f7b4')
 
 
@@ -27,3 +27,4 @@ package() {
     install -Dm644 "${srcdir}/spotify.protocol" "${pkgdir}/usr/share/kservices5/spotify.protocol"
     find ${pkgdir}/usr -type d -exec chmod 755 {} \;
 }
+
