@@ -1,6 +1,6 @@
 pkgname=spotify
-pkgver=1.0.33.106
-_anotherpkgver=g60b5d1f0-22
+pkgver=1.0.34.146
+_anotherpkgver=g28f9eda2
 pkgrel=1
 pkgdesc="A proprietary music streaming service"
 arch=('x86_64')
@@ -8,9 +8,9 @@ license=('custom:"Copyright (c) 2006-2010 Spotify Ltd"')
 url="http://www.spotify.com"
 options=('!strip')
 depends=("alsa-lib" "gconf" "gtk2" "glib2" "nss" "systemd" "libxtst" "libx11" "libxss" "libcurl-compat")
-source=("http://repository.spotify.com/pool/non-free/s/spotify-client/spotify-client_${pkgver}.${_anotherpkgver}_amd64.deb"
+source=("http://repository.spotify.com/pool/non-free/s/spotify-client/spotify-client_${pkgver}.${_anotherpkgver}-19_amd64.deb"
         "spotify.protocol")
-md5sums=('a88b13b6a41c8bbb0f235cd705f62508'
+md5sums=('df428370556f2300763be025359e9fb1'
          'ef25ddc5b6bf8fe1a0d64cbd79e1f7b4')
 
 
