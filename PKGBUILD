@@ -1,6 +1,6 @@
 pkgname=spotify
-pkgver=1.0.37.152
-_anotherpkgver=gc83ea995-42
+pkgver=1.0.38.171
+_anotherpkgver=g5e1cd7b2-22
 pkgrel=1
 pkgdesc="A proprietary music streaming service"
 arch=('x86_64')
@@ -10,7 +10,7 @@ options=('!strip')
 depends=("alsa-lib" "gconf" "gtk2" "glib2" "nss" "systemd" "libxtst" "libx11" "libxss" "libcurl-compat")
 source=("http://repository.spotify.com/pool/non-free/s/spotify-client/spotify-client_${pkgver}.${_anotherpkgver}_amd64.deb"
         "spotify.protocol")
-md5sums=('7fb0b777aa807bd79157f62ca3dc435f'
+md5sums=('085e994bdc09f03b2ceb4cbe81752d75'
          'ef25ddc5b6bf8fe1a0d64cbd79e1f7b4')
 
 
