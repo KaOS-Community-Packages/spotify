@@ -2,7 +2,7 @@
 
 A proprietary music streaming service
 
-[URL](https://www.spotify.com)
+[Homepage](https://www.spotify.com)
 
 Before install or upgrade, you need to install this package from KCP:
 ```
