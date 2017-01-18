@@ -16,15 +16,15 @@ md5sums=('4e76d87b1f24fb122f71b3e91ccf7d96'
 
 package() {
 	tar -xzf data.tar.gz -C "${pkgdir}"
-    rm -r ${pkgdir}/usr/share/doc
+    	rm -r ${pkgdir}/usr/share/doc
 	install -d "${pkgdir}"/usr/share/applications
 	install -d "${pkgdir}"/usr/share/pixmaps
 	install "${pkgdir}"/usr/share/spotify/spotify.desktop "${pkgdir}"/usr/share/applications/spotify.desktop
 	install "${pkgdir}"/usr/share/spotify/icons/spotify-linux-512.png "${pkgdir}"/usr/share/pixmaps/spotify-client.png
-    rm "${pkgdir}"/usr/bin/spotify
+    	rm "${pkgdir}"/usr/bin/spotify
 	echo -en '#!/bin/sh\nLD_PRELOAD=libcurl.so.3 /usr/share/spotify/spotify "$@"' > ${pkgdir}/usr/bin/spotify
-    chmod +x ${pkgdir}/usr/bin/spotify
-    install -Dm644 "${srcdir}/spotify.protocol" "${pkgdir}/usr/share/kservices5/spotify.protocol"
-    find ${pkgdir}/usr -type d -exec chmod 755 {} \;
+    	chmod +x ${pkgdir}/usr/bin/spotify
+    	install -Dm644 "${srcdir}/spotify.protocol" "${pkgdir}/usr/share/kservices5/spotify.protocol"
+    	find ${pkgdir}/usr -type d -exec chmod 755 {} \;
 }
 
