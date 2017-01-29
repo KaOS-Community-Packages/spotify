@@ -4,12 +4,12 @@ A proprietary music streaming service
 
 [Homepage](https://www.spotify.com)
 
-Before install or upgrade, you need to install this package from KCP:
+Required package from KCP:
 ```
-kcp -di libcurl-compat
+kcp -di curl-kcp
 ```
 
-Install:
+### Install:
 ```
 kcp -i spotify
 ```
