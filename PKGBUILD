@@ -22,27 +22,13 @@ build() {
 }
 
 package() {
-<<<<<<< HEAD
+
     tar -xzf data.tar.gz -C "${pkgdir}"
     rm -r ${pkgdir}/usr/share/doc
     install -dm755 ${pkgdir}/usr/share/applications
     install -dm755 ${pkgdir}/usr/lib/spotify
     install -Dm755 ${srcdir}/spotifywm-master/spotifywm.so "${pkgdir}"/usr/lib/spotify/spotifywm.so
     install "${pkgdir}"/usr/share/spotify/spotify.desktop "${pkgdir}"/usr/share/applications/spotify.desktop
-=======
-	tar -xzf data.tar.gz -C "${pkgdir}"
-    	rm -r ${pkgdir}/usr/share/doc
-	install -d "${pkgdir}"/usr/share/applications
-	install -d "${pkgdir}"/usr/share/pixmaps
-	install "${pkgdir}"/usr/share/spotify/spotify.desktop "${pkgdir}"/usr/share/applications/spotify.desktop
-	install "${pkgdir}"/usr/share/spotify/icons/spotify-linux-512.png "${pkgdir}"/usr/share/pixmaps/spotify-client.png
-    	rm "${pkgdir}"/usr/bin/spotify
-	echo -en '#!/bin/sh\nLD_PRELOAD=libcurl.so.3 /usr/share/spotify/spotify "$@"' > ${pkgdir}/usr/bin/spotify
-    	chmod +x ${pkgdir}/usr/bin/spotify
-    	install -Dm644 "${srcdir}/spotify.protocol" "${pkgdir}/usr/share/kservices5/spotify.protocol"
-    	find ${pkgdir}/usr -type d -exec chmod 755 {} \;
-}
->>>>>>> refs/remotes/origin/master
 
     local size
     for size in 22 24 32 48 64 128 256 512; do
