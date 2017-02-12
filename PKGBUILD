@@ -1,8 +1,6 @@
 pkgname=spotify
 pkgver=1.0.49.125
-# pkgver=1.0.48.103
 _anotherpkgver=g72ee7853-83
-# _anotherpkgver=g15edf1ec-121
 pkgrel=1
 pkgdesc="A proprietary music streaming service"
 arch=('x86_64')
@@ -25,12 +23,12 @@ build() {
 }
 
 package() {
-    tar -xzf data.tar.gz -C "${pkgdir}"
+    tar -xzf data.tar.gz -C ${pkgdir}
     rm -r ${pkgdir}/usr/share/doc
     install -dm755 ${pkgdir}/usr/share/applications
     install -dm755 ${pkgdir}/usr/lib/spotify
-    install -Dm755 ${srcdir}/spotifywm-master/spotifywm.so "${pkgdir}"/usr/lib/spotify/spotifywm.so
-    install -Dm644 "${pkgdir}"/usr/share/spotify/spotify.desktop "${pkgdir}"/usr/share/applications/spotify.desktop
+    install -Dm755 ${srcdir}/spotifywm-master/spotifywm.so ${pkgdir}/usr/lib/spotify/spotifywm.so
+    install -Dm644 ${pkgdir}/usr/share/spotify/spotify.desktop ${pkgdir}/usr/share/applications/spotify.desktop
 
     local size
     for size in 22 24 32 48 64 128 256 512; do
