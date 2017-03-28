@@ -4,6 +4,7 @@ _anotherpkgver=g2f08534a-47
 pkgrel=1
 pkgdesc="A proprietary music streaming service"
 arch=('x86_64')
+url="http://www.spotify.com"
 ## this is even worse they do _not_ have any license for the
 ## client sw see:
 ## https://community.spotify.com/t5/Desktop-Linux-Windows-Web-Player/What-license-does-the-linux-spotify-client-use/td-p/173356/page/2
