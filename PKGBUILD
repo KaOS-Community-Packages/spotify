@@ -4,8 +4,10 @@ _anotherpkgver=g2f08534a-47
 pkgrel=1
 pkgdesc="A proprietary music streaming service"
 arch=('x86_64')
-license=('custom:"Copyright (c) 2006-2017 Spotify Ltd"')
-url="http://www.spotify.com"
+## this is even worse they do _not_ have any license for the
+## client sw see:
+## https://community.spotify.com/t5/Desktop-Linux-Windows-Web-Player/What-license-does-the-linux-spotify-client-use/td-p/173356/page/2
+license=('custom: http://www.spotify.com/us/legal/end-user-agreement/')
 options=('!strip')
 depends=("alsa-lib" "gconf" "gtk2" "glib2" "nss" "systemd" "libxtst" "libx11" "libxss" "curl-kcp" "cups")
 source=("http://repository.spotify.com/pool/non-free/s/spotify-client/spotify-client_${pkgver}.${_anotherpkgver}_amd64.deb"
