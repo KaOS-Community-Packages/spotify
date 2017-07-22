@@ -1,6 +1,6 @@
 pkgname=spotify
-pkgver=1.0.57.474
-_anotherpkgver=gca9c9538-30
+pkgver=1.0.59.395
+_anotherpkgver=ge6ca9946-18
 pkgrel=1
 pkgdesc="A proprietary music streaming service"
 arch=('x86_64')
@@ -15,7 +15,7 @@ source=("http://repository.spotify.com/pool/non-free/s/spotify-client/spotify-cl
         "https://github.com/dasJ/spotifywm/archive/master.zip"
         'spotify'
         'spotify.protocol')
-md5sums=('18775750a2ad8837319b71ed26ed196a'
+md5sums=('7dd2bfc37bfcdd847a3478edefb59f72'
          'a14062077e248749fccd3af5d603aa11'
          '2fd3bb269b12082eb6b1c5c64c240332'
          'ef25ddc5b6bf8fe1a0d64cbd79e1f7b4')
