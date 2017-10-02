@@ -1,6 +1,6 @@
 pkgname=spotify
-pkgver=1.0.64.401
-_anotherpkgver=g9d720389-21
+pkgver=1.0.64.407
+_anotherpkgver=g9bd02c2d-26
 pkgrel=1
 pkgdesc="A proprietary music streaming service"
 arch=('x86_64')
