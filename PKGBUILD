@@ -13,7 +13,7 @@ options=('!strip')
 depends=("alsa-lib" "gconf" "gtk2" "glib2" "nss" "libxtst" "libx11" "libxss" "curl-kcp" "libcups")
 source=("http://repository.spotify.com/pool/non-free/s/spotify-client/spotify-client_${pkgver}.${_anotherpkgver}_amd64.deb"
         "https://github.com/dasJ/spotifywm/archive/master.zip"
-        'spotify'
+        'spotify.sh'
         'spotify.protocol')
 md5sums=('1a959c27304e244a93c40a904a29cf7f'
          'a14062077e248749fccd3af5d603aa11'
@@ -42,6 +42,6 @@ package() {
     chmod -R go-w ${pkgdir}/usr
     rm ${pkgdir}/usr/bin/spotify
     rm -rf ${pkgdir}/usr/share/spotify/icons
-    install -Dm755 ${srcdir}/spotify ${pkgdir}/usr/bin/spotify
+    install -Dm755 ${srcdir}/spotify.sh ${pkgdir}/usr/bin/spotify
     install -Dm644 ${srcdir}/spotify.protocol ${pkgdir}/usr/share/kservices5/spotify.protocol
 }
