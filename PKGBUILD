@@ -17,7 +17,7 @@ source=("http://repository.spotify.com/pool/non-free/s/spotify-client/spotify-cl
         'spotify.protocol')
 md5sums=('a02945be16cc86184624927cf198437d'
          'a14062077e248749fccd3af5d603aa11'
-         '2fd3bb269b12082eb6b1c5c64c240332'
+         '5224b4d9b427d153e1752d4498b4a214'
          'ef25ddc5b6bf8fe1a0d64cbd79e1f7b4')
 
 build() {
