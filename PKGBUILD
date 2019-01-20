@@ -1,7 +1,7 @@
 pkgname=spotify
 pkgver=1.0.96.181
 _anotherpkgver=gf6bc1b6b-12
-pkgrel=2
+pkgrel=3
 pkgdesc="A proprietary music streaming service"
 arch=('x86_64')
 url="http://www.spotify.com"
@@ -17,7 +17,7 @@ source=("http://repository.spotify.com/pool/non-free/s/spotify-client/spotify-cl
         'spotify.protocol')
 md5sums=('806f7eae254109428da4db1612f550ba'
          'a14062077e248749fccd3af5d603aa11'
-         '5224b4d9b427d153e1752d4498b4a214'
+         'd6771f7514bda891269c915ec44b127f'
          'ef25ddc5b6bf8fe1a0d64cbd79e1f7b4')
 
 build() {
@@ -29,8 +29,7 @@ package() {
     tar -xzf data.tar.gz -C ${pkgdir}
     rm -r ${pkgdir}/usr/share/doc
     install -dm755 ${pkgdir}/usr/share/applications
-    install -dm755 ${pkgdir}/usr/lib/spotify
-    install -Dm755 ${srcdir}/spotifywm-master/spotifywm.so ${pkgdir}/usr/lib/spotify/spotifywm.so
+    install -Dm755 ${srcdir}/spotifywm-master/spotifywm.so ${pkgdir}/usr/share/spotify/spotifywm.so
     install -Dm644 ${pkgdir}/usr/share/spotify/spotify.desktop ${pkgdir}/usr/share/applications/spotify.desktop
 
     local size
