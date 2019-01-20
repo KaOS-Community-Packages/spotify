@@ -1,7 +1,7 @@
 pkgname=spotify
 pkgver=1.0.96.181
 _anotherpkgver=gf6bc1b6b-12
-pkgrel=1
+pkgrel=2
 pkgdesc="A proprietary music streaming service"
 arch=('x86_64')
 url="http://www.spotify.com"
@@ -44,4 +44,7 @@ package() {
     rm -rf ${pkgdir}/usr/share/spotify/icons
     install -Dm755 ${srcdir}/spotify.sh ${pkgdir}/usr/bin/spotify
     install -Dm644 ${srcdir}/spotify.protocol ${pkgdir}/usr/share/kservices5/spotify.protocol
+    
+    # Ugly workaround
+    ln -s /usr/lib/libidn2.so ${pkgdir}/usr/share/spotify/libidn2.so.0
 }
