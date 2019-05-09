@@ -15,7 +15,7 @@ source=("http://repository.spotify.com/pool/non-free/s/spotify-client/spotify-cl
         "https://github.com/dasJ/spotifywm/archive/master.zip"
         'spotify.sh'
         'spotify.protocol')
-md5sums=('884c32a7bdd90481201bebd3f491ac95'
+md5sums=('4d18c6cf38410091563454609c19c16a'
          'a14062077e248749fccd3af5d603aa11'
          'd6771f7514bda891269c915ec44b127f'
          'ef25ddc5b6bf8fe1a0d64cbd79e1f7b4')
