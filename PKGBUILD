@@ -1,7 +1,7 @@
 pkgname=spotify
 pkgver=1.1.5.153
 _anotherpkgver=gf614956d-16
-pkgrel=1
+pkgrel=2
 pkgdesc="A proprietary music streaming service"
 arch=('x86_64')
 url="http://www.spotify.com"
@@ -10,7 +10,7 @@ url="http://www.spotify.com"
 ## https://community.spotify.com/t5/Desktop-Linux-Windows-Web-Player/What-license-does-the-linux-spotify-client-use/td-p/173356/page/2
 license=('custom: http://www.spotify.com/us/legal/end-user-agreement/')
 options=('!strip')
-depends=("alsa-lib" "gconf" "gtk2" "glib2" "nss" "libxtst" "libx11" "libxss" "curl-kcp" "libcups")
+depends=("alsa-lib" "gconf" "gtk2" "glib2" "nss" "libxtst" "libx11" "libxss" "curl-kcp" "libcups" "atk" "at-spi2-atk")
 source=("http://repository.spotify.com/pool/non-free/s/spotify-client/spotify-client_${pkgver}.${_anotherpkgver}_amd64.deb"
         "https://github.com/dasJ/spotifywm/archive/master.zip"
         'spotify.sh'
