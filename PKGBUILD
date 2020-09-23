@@ -1,7 +1,7 @@
 pkgname=spotify
-pkgver=1.1.26.501
-_anotherpkgver=gbe11e53b-15
-pkgrel=1
+pkgver=1.1.42.622
+_anotherpkgver=gbd112320-37
+pkgrel=2
 pkgdesc="A proprietary music streaming service"
 arch=('x86_64')
 url="http://www.spotify.com"
@@ -12,24 +12,16 @@ license=('custom: http://www.spotify.com/us/legal/end-user-agreement/')
 options=('!strip')
 depends=("alsa-lib" "gtk2" "glib2" "nss" "libxtst" "libx11" "libxss" "curl-kcp" "libcups" "atk" "at-spi2-atk")
 source=("http://repository.spotify.com/pool/non-free/s/spotify-client/spotify-client_${pkgver}.${_anotherpkgver}_amd64.deb"
-        "https://github.com/dasJ/spotifywm/archive/master.zip"
         'spotify.sh'
         'spotify.protocol')
-md5sums=('df25d4ba05364596135bb3dabf844720'
-         'a14062077e248749fccd3af5d603aa11'
-         'd6771f7514bda891269c915ec44b127f'
+md5sums=('9c9cbd30bac795b8ca71643de9d2d719'
+         '6f455892f05a20c3f34089f7c20dfb97'
          'ef25ddc5b6bf8fe1a0d64cbd79e1f7b4')
-
-build() {
-    cd spotifywm-master
-    make
-}
 
 package() {
     tar -xzf data.tar.gz -C ${pkgdir}
     rm -r ${pkgdir}/usr/share/doc
     install -dm755 ${pkgdir}/usr/share/applications
-    install -Dm755 ${srcdir}/spotifywm-master/spotifywm.so ${pkgdir}/usr/share/spotify/spotifywm.so
     install -Dm644 ${pkgdir}/usr/share/spotify/spotify.desktop ${pkgdir}/usr/share/applications/spotify.desktop
 
     local size

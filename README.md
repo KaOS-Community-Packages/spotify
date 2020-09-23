@@ -4,8 +4,6 @@ A proprietary music streaming service
 
 [Homepage](https://www.spotify.com)
 
-### Extras to the PB:
-* Added [spotifywm][1] to make it more friendly to KWin rules
 
 ### Required package from KCP:
 ```
