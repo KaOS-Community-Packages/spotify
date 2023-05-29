@@ -1,17 +1,17 @@
 pkgname=spotify
-pkgver=1.2.8.923
-_anotherpkgver=g4f94bf0d
+pkgver=1.2.9.743
+_anotherpkgver=g85d9593d
 pkgrel=1
 pkgdesc="A proprietary music streaming service"
 arch=('x86_64')
 url="http://www.spotify.com"
 license=('custom: http://www.spotify.com/us/legal/end-user-agreement/')
 options=('!strip')
-depends=("alsa-lib" "gtk2" "glib2" "nss" "libxtst" "libx11" "libxss" "curl-kcp" "libcups" "atk" "at-spi2-atk")
+depends=("alsa-lib" "gtk2" "glib2" "nss" "libxtst" "libx11" "libxss" "curl-kcp" "libcups" "at-spi2-core")
 source=("http://repository.spotify.com/pool/non-free/s/spotify-client/spotify-client_${pkgver}.${_anotherpkgver}_amd64.deb"
         'spotify.sh'
         'spotify.protocol')
-md5sums=('10af2fb8989f0b8b7c3b3c13d4d86efd'
+md5sums=('34c2be444bfcf0c7e963a65793b46649'
          '6f455892f05a20c3f34089f7c20dfb97'
          'ef25ddc5b6bf8fe1a0d64cbd79e1f7b4')
 
